@@ -10,7 +10,8 @@ const server = fastify({
 
 await server.register(import("./app/index.js"));
 
-export default async function handler(req: Request, res: Response) {
-  await server.ready();
-  server.server.emit("request", req, res);
+export default function (req: Request, res: Response) {
+  server.ready().then(() => {
+    server.server.emit("request", req, res);
+  });
 }
