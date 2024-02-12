@@ -5,7 +5,7 @@
     "moduleResolution": "NodeNext",
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir": "./api",
+    "outDir": "./dist",
     "verbatimModuleSyntax": true,
     "esModuleInterop": true,
 
