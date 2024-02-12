@@ -8,7 +8,7 @@
   "scripts": {
     "vercel-build": "tsc -p tsconfig.json && mv dist api",
     "build": "rm -rf ./dist && tsc -p tsconfig.json",
-    "start": "node --no-warnings --loader ts-node/esm src/server.ts"
+    "start": "node --no-warnings --loader ts-node/esm src/dev.ts"
   },
   "dependencies": {
     "@fluencelabs/js-client": "0.8.0",
