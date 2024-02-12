@@ -6,7 +6,7 @@
   "type": "module",
   "keywords": [],
   "scripts": {
-    "vercel-build": "tsc -p tsconfig.json && mv dist api",
+    "vercel-build": "tsc -p tsconfig.json",
     "build": "rm -rf ./dist && tsc -p tsconfig.json",
     "start": "node --no-warnings --loader ts-node/esm src/dev.ts"
   },
