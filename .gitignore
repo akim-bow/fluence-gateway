@@ -5,7 +5,6 @@
 /.fluence/schemas
 /.fluence/tmp
 /.fluence/aqua-dependencies/package.json
-compiled-aqua/
 **/node_modules
 **/target/
 .repl_history
