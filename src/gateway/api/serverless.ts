@@ -3,7 +3,12 @@ import fastify from "fastify";
 import dotenv from "dotenv";
 
 // Runtime dependencies required for this function. Vercel imports only direct listed dependencies.
-(() => [import("@fluencelabs/js-client"), import("@sinclair/typebox")])();
+(() => [
+  import("@fluencelabs/js-client"),
+  import("@sinclair/typebox"),
+  import("../dist/compiled-aqua/main.js"),
+  import("../dist/relays.json"),
+])();
 
 dotenv.config();
 
