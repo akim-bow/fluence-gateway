@@ -8,10 +8,9 @@ const server = fastify({
   logger: true,
 }).withTypeProvider<TypeBoxTypeProvider>();
 
-await server.register(import("./app/index.js"));
+await server.register(import("../dist/app/index.js"));
 
-export default function (req: Request, res: Response) {
-  server.ready().then(() => {
-    server.server.emit("request", req, res);
-  });
+export default async function (req: Request, res: Response) {
+  await server.ready();
+  server.server.emit("request", req, res);
 }
