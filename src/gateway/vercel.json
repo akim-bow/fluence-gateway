@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/:path*", "destination": "/api/serverless" }]
+  "rewrites": [{ "source": "/:path*", "destination": "/api/serverless" }],
+  "functions": {
+    "api/serverless.ts": {
+      "includeFiles": "dist/**/*"
+    }
+  }
 }

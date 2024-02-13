@@ -16,8 +16,6 @@ import dotenv from "dotenv";
   import("@fluencelabs/avm"),
   import("@fastify/rate-limit"),
   import("@sinclair/typebox"),
-  import("../dist/compiled-aqua/main.js"),
-  import("../dist/relays.json", { assert: { type: "json" } }),
 ])();
 
 dotenv.config();
