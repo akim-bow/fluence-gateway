@@ -8,8 +8,9 @@ import dotenv from "dotenv";
   // This import will fail in runtime
   () => import("@fluencelabs/marine-worker"),
   import("@fluencelabs/marine-js"),
-  // This import will impact loading speed
+  // This imports will impact loading speed
   () => import("@fluencelabs/marine-js/marine-js.wasm"),
+  () => import("@fluencelabs/avm/dist/avm.wasm"),
   import("@fluencelabs/threads"),
   import("observable-fns"),
   import("@fluencelabs/avm"),
