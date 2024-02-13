@@ -7,7 +7,7 @@ import dotenv from "dotenv";
   import("@fluencelabs/js-client"),
   import("@sinclair/typebox"),
   import("../dist/compiled-aqua/main.js"),
-  import("../dist/relays.json", { with: { type: "json" } }),
+  import("../dist/relays.json", { assert: { type: "json" } }),
 ])();
 
 dotenv.config();
