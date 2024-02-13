@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 // Runtime dependencies required for this function. Vercel imports only direct listed dependencies.
 (() => [
   import("@fluencelabs/js-client"),
-  import("@fluencelabs/marine-worker"),
+  // This import will fail in runtime
+  () => import("@fluencelabs/marine-worker"),
   import("@fluencelabs/avm"),
   import("@fastify/rate-limit"),
   import("@sinclair/typebox"),
