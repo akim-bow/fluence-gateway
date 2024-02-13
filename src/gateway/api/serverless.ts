@@ -1,7 +1,6 @@
 import type { TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
 import fastify from "fastify";
 import dotenv from "dotenv";
-import module from "node:module";
 
 // Runtime dependencies required for this function. Vercel imports only direct listed dependencies.
 (() => [
@@ -10,10 +9,7 @@ import module from "node:module";
   () => import("@fluencelabs/marine-worker"),
   import("@fluencelabs/marine-js"),
   // This import will impact loading speed
-  () =>
-    module.createRequire(import.meta.url)(
-      "@fluencelabs/marine-js/dist/marine-js.wasm",
-    ),
+  () => import("@fluencelabs/marine-js/marine-js.wasm"),
   import("@fluencelabs/threads"),
   import("observable-fns"),
   import("@fluencelabs/avm"),
