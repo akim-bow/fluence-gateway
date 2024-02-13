@@ -7,6 +7,9 @@ import dotenv from "dotenv";
   import("@fluencelabs/js-client"),
   // This import will fail in runtime
   () => import("@fluencelabs/marine-worker"),
+  import("@fluencelabs/marine-js"),
+  import("@fluencelabs/threads"),
+  import("observable-fns"),
   import("@fluencelabs/avm"),
   import("@fastify/rate-limit"),
   import("@sinclair/typebox"),
